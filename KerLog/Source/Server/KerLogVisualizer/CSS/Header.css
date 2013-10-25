@@ -1,0 +1,30 @@
+﻿
+.labelHeader {
+
+}
+.headerBackground{
+    background-size:100% 100%;
+    overflow:hidden;
+    height:250px;
+}
+.headerImageBackground {
+    background-image:url(../Resources/KLR1.jpg);
+    background-size:100% 250px;
+    height:250px;
+}
+.headerTitleTextBackground {
+    z-index:1;
+}
+.headerTitleText {
+    text-align:center;
+    color:white;
+    font:Lucida Console;
+    font-size:40px;
+    vertical-align:middle;
+    line-height:250px;
+}
+Body {
+    margin: 0px;
+    padding: 0px;
+}
+

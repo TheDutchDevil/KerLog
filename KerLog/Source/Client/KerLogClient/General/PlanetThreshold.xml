@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<planets>
+  <planet name="Kerbin" threshold="70000"/>
+  <planet name="Eve" threshold="70000"/>
+  <planet name="Gilly" threshold="70000"/>
+  <planet name="Mun" threshold="70000"/>
+  <planet name="Minmus" threshold="70000"/>
+  <planet name="Duna" threshold="70000"/>
+  <planet name="Ike" threshold="70000"/>
+  <planet name="Dres" threshold="70000"/>
+  <planet name="Jool" threshold="70000"/>
+  <planet name="Laythe" threshold="70000"/>
+  <planet name="Vall" threshold="70000"/>
+  <planet name="Tylo" threshold="70000"/>
+  <planet name="Bop" threshold="70000"/>
+  <planet name="Pol" threshold="70000"/>
+  <planet name="Eeloo" threshold="70000"/>
+</planets>
