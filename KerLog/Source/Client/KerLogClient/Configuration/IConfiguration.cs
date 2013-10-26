@@ -18,12 +18,6 @@ namespace KerLogClient.Configuration
 
         string IP { get; }
 
-        string DatabaseName { get; }
-
-        string UserID { get; }
-
-        string Password { get; }
-
         int Port { get; }
     }
 }

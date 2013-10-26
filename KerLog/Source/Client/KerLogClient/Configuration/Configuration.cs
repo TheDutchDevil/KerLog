@@ -23,12 +23,6 @@ namespace KerLogClient.Configuration
 
         private string _iP;
 
-        private string _dbs;
-
-        private string _usernameId;
-
-        private string _password;
-
         private int _port;
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger
@@ -41,34 +35,13 @@ namespace KerLogClient.Configuration
             PropertyChanged += Configuration_PropertyChanged;
             string rawPersistedFlights = _plugConf.GetValue<string>("persistedFlights");
             _iP = _plugConf.GetValue<string>("iP");
-            _dbs = _plugConf.GetValue<string>("dbs");
-            _usernameId = _plugConf.GetValue<string>("dbsUsername");
-            _password = _plugConf.GetValue<string>("dbsPassword");
-            _port = _plugConf.GetValue<int>("port",10000);
+            _port = _plugConf.GetValue<int>("port",-1);
             _persistedFlightsLock = new object();
 
             if(_port == -1)
             {
                 log.Debug("Port was not found in the configuration");
                 _port = 10000;
-            }
-
-            if (_password == null)
-            {
-                log.Debug("Password was not found in the configuration");
-                Password = "insert";
-            }
-
-            if(_usernameId == null)
-            {
-                log.Debug("User ID was not found in the configuration");
-                UserID = "KerLogTest";
-            }
-
-            if(_dbs == null)
-            {
-                log.Debug("Database name was not found in the configuration");
-                DatabaseName = "KerLogTest";
             }
 
             if (_iP == null)
@@ -104,18 +77,6 @@ namespace KerLogClient.Configuration
             else if (e.PropertyName.Equals("_iP"))
             {
                 _plugConf.SetValue("iP", _iP);
-            }
-            else if (e.PropertyName.Equals("_dbs"))
-            {
-                _plugConf.SetValue("dbs", _dbs);
-            }
-            else if (e.PropertyName.Equals("_usernameId"))
-            {
-                _plugConf.SetValue("dbsUsername", _usernameId);
-            }
-            else if (e.PropertyName.Equals("_password"))
-            {
-                _plugConf.SetValue("dbsPassword", _password);
             }
             else if(e.PropertyName.Equals("_port"))
             {
@@ -202,36 +163,6 @@ namespace KerLogClient.Configuration
             {
                 _iP = value;
                 OnPropertyChanged("_iP");
-            }
-        }
-
-        public string DatabaseName
-        {
-            get { return _dbs; }
-            private set 
-            { 
-                _dbs = value;
-                OnPropertyChanged("_dbs");
-            }
-        }
-
-        public string UserID
-        {
-            get { return _usernameId ; }
-            private set 
-            {
-                _usernameId = value;
-                OnPropertyChanged("_usernameId");
-            }
-        }
-
-        public string Password
-        {
-            get { return _password; }
-            private set 
-            {
-                _password = value;
-                OnPropertyChanged("_password");
             }
         }
 
