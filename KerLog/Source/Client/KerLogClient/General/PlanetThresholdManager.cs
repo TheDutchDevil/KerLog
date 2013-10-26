@@ -14,6 +14,8 @@ namespace KerLogClient.General
         private static List<planetsPlanet> _planetsThreshold;
         private static string THRESHOLD_FILE_PATH = "General\\PlanetThreshold.xml";
 
+        private static bool _correctlySetUp;
+
         static PlanetThresholdManager()
         {
             log.Debug("Reading the PlanetThreshold XML file");
@@ -21,8 +23,9 @@ namespace KerLogClient.General
 
             if (!File.Exists(THRESHOLD_FILE_PATH))
             {
-                log.Fatal(string.Format("Threshold file could not be found at path {0}", THRESHOLD_FILE_PATH));
-                throw new IOException(string.Format("File {0} does not exist!", THRESHOLD_FILE_PATH));              
+                log.Error(string.Format("Threshold file could not be found at path {0}", THRESHOLD_FILE_PATH));
+                _correctlySetUp = false;
+                return;
             }
 
             XmlSerializer serializer = new XmlSerializer(typeof(planets));
@@ -38,15 +41,28 @@ namespace KerLogClient.General
             }
             catch (Exception ex)
             {
-                log.Fatal("An exception occured while deserializing the threshold file", ex);
-                throw ex;
+                log.Error("An exception occured while deserializing the threshold file", ex);
+                _correctlySetUp = false;
+                return;
             }
 
             _planetsThreshold.AddRange(lplanets.Items);
+            _correctlySetUp = true;
+        }
+
+        public static bool CorrectlySetUp
+        {
+            get { return _correctlySetUp; }
         }
 
         public static int ThresholdForPlanet(string planetName)
         {
+            if(!CorrectlySetUp)
+            {
+                log.WarnFormat("Threshold for planet method was called while the ThresholdManager is invald");
+                return -1;
+            }
+
             log.Debug(string.Format("Responding to a threshold query for planet {0}", planetName));
 
             planetsPlanet output = _planetsThreshold.Single(pt => (pt.name == planetName));

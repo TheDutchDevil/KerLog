@@ -1,4 +1,5 @@
-﻿using KerLogClient.FlightsManager;
+﻿using KerLogClient.FlightListener.FlightSpyImpl;
+using KerLogClient.FlightsManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace KerLogClient.FlightListener
         {
             log.Info("Attempting to send flights to database");
             Manager.AttemptToSendFlights();
+
+            FlightSpyManager.SpyManager.AddFlightSpy(new AscendSpy());
         }
     }
 }

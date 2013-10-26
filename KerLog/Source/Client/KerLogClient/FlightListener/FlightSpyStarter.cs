@@ -15,6 +15,8 @@ namespace KerLogClient.FlightListener
         private double _lastMet;
         private bool _startedFlight = false;
 
+        FlightSpyManager _manager;
+
         #region MonoBehaviour
 
         private void Start()
@@ -22,7 +24,7 @@ namespace KerLogClient.FlightListener
             log.Debug("Setting up the FlightSpyStarter");
             _vessel = FlightGlobals.ActiveVessel;
             _lastMet = FlightLogger.met;
-            FlightSpy.PrepareFlightSpy();
+            _manager = FlightSpyManager.SpyManager;
         }
 
         private void Update()
@@ -56,7 +58,7 @@ namespace KerLogClient.FlightListener
         private void OnDestroy()
         {
             log.Debug("Firing FlightStopEvent");
-            FlightStop();
+            FireOnFlightStop();
         }
 
         #endregion

@@ -59,16 +59,17 @@
     <Compile Include="Configuration\Configuration.cs" />
     <Compile Include="Configuration\ConfigurationProvider.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
-    <Compile Include="FlightListener\FlightSpy.cs" />
-    <Compile Include="FlightListener\FlightSpyAscend.cs" />
-    <Compile Include="FlightListener\FlightSpyVelocity.cs" />
+    <Compile Include="FlightListener\FlightSpyManager.cs" />
+    <Compile Include="FlightListener\FlightSpyImpl\AscendSpy.cs" />
     <Compile Include="FlightListener\FlightSpyStarter.cs" />
+    <Compile Include="FlightListener\IFlightSpy.cs" />
     <Compile Include="FlightListener\MenuSpy.cs" />
     <Compile Include="FlightsManager\Manager.cs" />
     <Compile Include="FlightsManager\TCPManager.cs" />
     <Compile Include="General\Logging.cs" />
     <Compile Include="General\PlanetThreshold.cs" />
     <Compile Include="General\PlanetThresholdManager.cs" />
+    <Compile Include="General\Tuple.cs" />
     <Compile Include="General\Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +88,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

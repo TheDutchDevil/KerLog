@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KerLogData.FlightData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace KerLogClient.FlightListener
         /// </summary>
         /// <returns>True if all the pre requisites for starting the
         /// FlightSpy are met. False if they are not met.</returns>
-        bool PreRequisitesAreMet();
+        bool PreRequisitesAreMet(Flight flight);
 
         /// <summary>
         /// Function called by the flight spy manager to determine
@@ -35,7 +36,14 @@ namespace KerLogClient.FlightListener
         /// </summary>
         /// <returns>True if the conditions for starting the FlightSpy
         /// are met</returns>
-        bool StartFlightSpy();
+        bool ShouldStartFlightSpy();
+
+        /// <summary>
+        /// Function called by the flight spy manager after which the
+        /// IFlightSpy should set up its internal resources to start
+        /// receiving updates
+        /// </summary>
+        void StartFlightSpy(Flight flight);
 
         /// <summary>
         /// Method that is called for the specified MET interval after
@@ -50,6 +58,14 @@ namespace KerLogClient.FlightListener
         /// the update method and start calling the StartFlightSpy method again
         /// </summary>
         /// <returns></returns>
-        bool StopFlightSpy();
+        bool ShouldFlightSpyStop();
+
+        /// <summary>
+        /// Sends a stop signal to the flight spy after which it shuts
+        /// down and releases any resources used.
+        /// </summary>
+        void StopFlightSpy();
+
+        string ToString();
     }
 }
