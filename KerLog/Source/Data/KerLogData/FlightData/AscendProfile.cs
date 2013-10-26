@@ -51,6 +51,7 @@ namespace KerLogData.FlightData
             AscendPoint point = new AscendPoint(heightInMeters);
             double deltaTime = met - _ascendStart;
             point.DeltaTSinceAscendStart = deltaTime;
+            this._ascendPoints.Add(point);
         }
 
         public void StopAscend(bool ascendSucceeded)
