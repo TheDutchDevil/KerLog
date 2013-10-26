@@ -75,6 +75,8 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\Database\DatabaseConnection.cs" />
+    <Compile Include="Model\NumberCruncher\AscendDataProvider.cs" />
+    <Compile Include="Model\NumberCruncher\DataStorage\AscendData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
@@ -97,9 +99,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\NumberCruncher\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Data\KerLogData\KerLogData.csproj">
       <Project>{cab12856-5efa-4413-8b6d-a7e6feed4690}</Project>

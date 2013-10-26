@@ -72,16 +72,16 @@ namespace KerLogClient.FlightsManager
                 {
                     log.Debug(string.Format("Managed to connect to the server, waiting to see if I can stay connect"));
 
-                    if(!ReadObjectFromStream<bool>(stream))
+                    if (!StreamUtil.ReadObjectFromStream<bool>(stream))
                     {
-                        log.Info(string.Format("Server aborted the connection for the following reason '{0}'", ReadObjectFromStream<string>(stream)));
+                        log.Info(string.Format("Server aborted the connection for the following reason '{0}'", StreamUtil.ReadObjectFromStream<string>(stream)));
                         socket.Disconnect(false);
                         return;
                     }
-                    
-                    WriteToStream(Util.UniqueHashID(), stream);
 
-                    bool canSendFlights = ReadObjectFromStream<bool>(stream);
+                    StreamUtil.WriteToStream(Util.UniqueHashID(), stream);
+
+                    bool canSendFlights = StreamUtil.ReadObjectFromStream<bool>(stream);
 
                     log.Debug(string.Format("I {0} send flights to the server", canSendFlights ? "can" : "cannot"));
                     if(!canSendFlights)
@@ -93,15 +93,15 @@ namespace KerLogClient.FlightsManager
                     foreach(Flight f in flights)
                     {
                         log.Debug(string.Format("Attempting to send flight {0} to server", f.VesselName));
-                        WriteToStream(true, stream);
+                        StreamUtil.WriteToStream(true, stream);
 
-                        ReadObjectFromStream<object>(stream);
+                        StreamUtil.ReadObjectFromStream<object>(stream);
 
                         log.Debug(string.Format("Received answer from the server, actually sending flight"));
 
-                        WriteToStream(f, stream);
+                        StreamUtil.WriteToStream(f, stream);
 
-                        if(ReadObjectFromStream<bool>(stream))
+                        if (StreamUtil.ReadObjectFromStream<bool>(stream))
                         {
                             log.Debug("Flight succesfully persisted, removing from sandbox");
                             Manager.RemoveFlightFromSandbox(f);
@@ -113,7 +113,7 @@ namespace KerLogClient.FlightsManager
                     }
 
                     log.Debug("All flights sent, closing connection");
-                    WriteToStream(false, stream);
+                    StreamUtil.WriteToStream(false, stream);
 
                     socket.Disconnect(false);
                     log.Debug("Disconnected from socket");
@@ -125,78 +125,5 @@ namespace KerLogClient.FlightsManager
                 return;
             }
         }
-
-        public static void WriteToStream<T>(T objectToWrite, Stream stream)
-        {
-            byte[] messageBytes = ObjectToByteArray(objectToWrite);
-            byte[] messageSizeBytes = ObjectToByteArray(messageBytes.Length);
-
-            stream.Write(messageSizeBytes, 0, 4);
-            stream.Write(messageBytes, 0, messageBytes.Length);
-        }
-
-        private static byte[] ObjectToByteArray(Object obj)
-        {
-            if(obj.GetType().Equals(typeof(Flight)))
-            {
-                return ProtoBufWrapper.ToByteArray(obj as Flight);
-            }
-
-            BinaryFormatter bf = new BinaryFormatter();
-            using (MemoryStream ms = new MemoryStream())
-            {
-                bf.Serialize(ms, obj);
-                return ms.ToArray();
-            }
-        }
-
-        /// <summary>
-        /// Reads an object of the type t from the stream, according to the format 4 bytes
-        /// which represent an int value with the object size, then the actual object.
-        /// </summary>
-        /// <typeparam name="T">Supports c# primites or a Flight object</typeparam>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        private static T ReadObjectFromStream<T>(NetworkStream stream)
-        {
-            log.Debug(string.Format("Attempting to deserialize an object of the type {0}", typeof(T).Name));
-
-            byte[] messageSizeBytes = new byte[4];
-            stream.Read(messageSizeBytes, 0, 4);
-
-            int messageSize = BitConverter.ToInt32(messageSizeBytes, 0);
-
-            log.Debug(string.Format("Deserializing a message of length {0}", messageSize));
-
-            byte[] messageBytes = new byte[messageSize];
-            stream.Read(messageBytes, 0, messageSize);
-
-            log.Debug("Raw bytes succesfully read");
-
-            return DeserializeObject<T>(messageBytes);
-        }
-
-        private static T DeserializeObject<T>(byte[] objectInBytes)
-        {
-            if (typeof(T).Equals(typeof(Flight)))
-            {
-                return (T)((object)ProtoBufWrapper.FlightFromByteArray(objectInBytes));
-            }
-            else
-            {
-                var ms = new MemoryStream(objectInBytes);
-                try
-                {
-                    var formatter = new BinaryFormatter();
-                    return (T)formatter.Deserialize(ms);
-                }
-                finally
-                {
-                    ms.Close();
-                }
-            }
-        }
-
-
     }
 }

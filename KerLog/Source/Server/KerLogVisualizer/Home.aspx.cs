@@ -1,4 +1,5 @@
-﻿using KerLogVisualizer.Views;
+﻿using KerLogVisualizer.Model.NumberCruncher;
+using KerLogVisualizer.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace KerLogVisualizer
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            AscendDataProvider.AscendDataForPlanet("Kerbin", false);
         }
 
         protected void home_Init(object sender, EventArgs e)

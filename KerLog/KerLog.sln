@@ -28,6 +28,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{23B6BFD2-2DDA-4528-9AC6-CCC0220796C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoBufTests", "ProtoBufTests\ProtoBufTests.csproj", "{D938FA0E-E1C5-40E5-BB22-441B4BB5162A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,10 @@ Global
 		{26AA4288-B222-43A3-9C8A-AD7B94C02C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26AA4288-B222-43A3-9C8A-AD7B94C02C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26AA4288-B222-43A3-9C8A-AD7B94C02C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D938FA0E-E1C5-40E5-BB22-441B4BB5162A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D938FA0E-E1C5-40E5-BB22-441B4BB5162A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D938FA0E-E1C5-40E5-BB22-441B4BB5162A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D938FA0E-E1C5-40E5-BB22-441B4BB5162A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +70,6 @@ Global
 		{0F028C59-31F4-4A34-98E5-D96CCF4FA3D8} = {2DE8E142-246F-4022-ACAE-A25BE7920944}
 		{CAB12856-5EFA-4413-8B6D-A7E6FEED4690} = {57771E45-554C-40ED-ACD1-016B71FC43CD}
 		{26AA4288-B222-43A3-9C8A-AD7B94C02C2A} = {D47D2E63-5D35-41EC-9CCF-14009DD3BE4C}
+		{D938FA0E-E1C5-40E5-BB22-441B4BB5162A} = {23B6BFD2-2DDA-4528-9AC6-CCC0220796C2}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,41 @@
+2013-10-26 18:13:01,612 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-26 18:13:16,394 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:45,366 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:46,585 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:47,492 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:48,550 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:49,497 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:50,501 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:51,558 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:52,561 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:53,756 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:55,021 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:56,318 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:13:57,526 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:16:45,848 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-26 18:16:45,933 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:16:59,461 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:27:05,951 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-26 18:27:06,013 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,805 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-26 18:29:17,865 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,968 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,969 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,969 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 18:29:17,969 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 16 
+2013-10-26 20:35:26,619 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-26 20:35:37,138 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-26 21:05:16,248 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-26 21:05:16,311 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 

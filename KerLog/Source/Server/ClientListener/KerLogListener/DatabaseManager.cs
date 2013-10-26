@@ -2,6 +2,7 @@
 using KerLogData.FlightManager;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -171,7 +172,7 @@ namespace ClientListener.KerLogListener
         /// <returns>true if the flight has not been persisted</returns>
         private bool AttemptToPersistFlight(Flight flight)
         {
-            log.Info(string.Format("Attempting to inser flight {0} into databse", flight.VesselName));
+            log.Info(string.Format("Attempting to insert flight {0} into databse", flight.VesselName));
             bool failed = false;
             try
             {
@@ -180,7 +181,9 @@ namespace ClientListener.KerLogListener
                 using (SqlCommand command = new SqlCommand("INSERT INTO FlightData (InsertTimeStamp, SenderHashID, FlightData) VALUES (GetDate(), @hashID, @flight)", _connection))
                 {
                     command.Parameters.AddWithValue("@hashID", _id);
-                    command.Parameters.AddWithValue("@flight", ProtoBufWrapper.ToByteArray(flight));
+                    SqlParameter param = command.Parameters.Add("@flight", SqlDbType.VarBinary);
+                    param.Value = ProtoBufWrapper.ToByteArray(flight);
+
                     command.ExecuteNonQuery();
                 }
             }

@@ -46,6 +46,7 @@
     <Compile Include="FlightData\AscendProfile.cs" />
     <Compile Include="FlightData\Flight.cs" />
     <Compile Include="FlightManager\ProtoBufWrapper.cs" />
+    <Compile Include="FlightManager\StreamUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

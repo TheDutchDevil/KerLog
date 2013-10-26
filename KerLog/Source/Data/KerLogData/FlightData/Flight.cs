@@ -55,6 +55,14 @@ namespace KerLogData.FlightData
 
         #region Ascend
 
+        public List<AscendProfile> AscendProfiles
+        {
+            get
+            {
+                return this._ascendProfiles.ToList();
+            }
+        }
+
         public void StartAscend(string planet, double metAtStart)
         {
             if(IsAnyAscendActive)

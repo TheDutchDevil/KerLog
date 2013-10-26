@@ -83,8 +83,8 @@ namespace ClientListener.KerLogListener
                 log.Info(string.Format("Not enought capacity to deal with the client at {0}", client.RemoteEndPoint));
                 using(NetworkStream stream = new NetworkStream(client))
                 {
-                    WriteToStream(false, stream);
-                    WriteToStream("Connection aborted because server is too busy", stream);
+                    StreamUtil.WriteToStream(false, stream);
+                    StreamUtil.WriteToStream("Connection aborted because server is too busy", stream);
                 }
                 client.Disconnect(false);
             }            
@@ -98,9 +98,9 @@ namespace ClientListener.KerLogListener
             {
                 using (var stream = new NetworkStream(handler))
                 {
-                    WriteToStream(true, stream);
+                    StreamUtil.WriteToStream(true, stream);
 
-                    string hash = ReadObjectFromStream<string>(stream);
+                    string hash = StreamUtil.ReadObjectFromStream<string>(stream);
 
                     log.Debug(string.Format("Received hash {0}", hash));
 
@@ -109,19 +109,19 @@ namespace ClientListener.KerLogListener
                     if (dbsManager.ConnectionIsValid)
                     {
                         log.Debug("Connection is valid, asking for flights");
-                        WriteToStream(true, stream);
+                        StreamUtil.WriteToStream(true, stream);
 
-                        bool hasFlights = ReadObjectFromStream<bool>(stream);
+                        bool hasFlights = StreamUtil.ReadObjectFromStream<bool>(stream);
                         while (hasFlights)
                         {
                             log.Debug("Flights available, asking for a single flight");
-                            WriteToStream(new object(), stream);
-                            Flight f = ReadObjectFromStream<Flight>(stream);
+                            StreamUtil.WriteToStream(new object(), stream);
+                            Flight f = StreamUtil.ReadObjectFromStream<Flight>(stream);
 
-                            log.Debug("Writing flight to database and sending result to client");
+                            log.DebugFormat("Writing flight for vessel {0} to database and sending result to client", f.VesselName);
 
-                            WriteToStream(dbsManager.PersistFlight(f), stream);
-                            hasFlights = ReadObjectFromStream<bool>(stream);
+                            StreamUtil.WriteToStream(dbsManager.PersistFlight(f), stream);
+                            hasFlights = StreamUtil.ReadObjectFromStream<bool>(stream);
                         }
                         log.Debug(string.Format("No more flights left, disconnecting socket {0}", handler.RemoteEndPoint));
                         handler.Disconnect(true);
@@ -129,7 +129,7 @@ namespace ClientListener.KerLogListener
                     else
                     {
                         log.Warn(string.Format("DB for hash {0} is invalid", hash));
-                        WriteToStream(false, stream);
+                        StreamUtil.WriteToStream(false, stream);
                         handler.Disconnect(true);
                     }
                 }
@@ -140,72 +140,6 @@ namespace ClientListener.KerLogListener
                 handler.Disconnect(true);
             }
         }
-
-        public void WriteToStream<T>(T objectToWrite, Stream stream)
-        {
-            byte[] messageBytes = ObjectToByteArray(objectToWrite);
-            byte[] messageSizeBytes = ObjectToByteArray(messageBytes.Length);
-
-            stream.Write(messageSizeBytes, 0, 4);
-            stream.Write(messageBytes, 0, messageBytes.Length);
-        }
-
-        private byte[] ObjectToByteArray(Object obj)
-        {
-            if (obj.GetType().Equals(typeof(Flight)))
-            {
-                return ProtoBufWrapper.ToByteArray(obj as Flight);
-            }
-
-            BinaryFormatter bf = new BinaryFormatter();
-            using (MemoryStream ms = new MemoryStream())
-            {
-                bf.Serialize(ms, obj);
-                return ms.ToArray();
-            }
-        }
-
-        /// <summary>
-        /// Reads an object of the type t from the stream, according to the format 4 bytes
-        /// which represent an int value with the object size, then the actual object.
-        /// </summary>
-        /// <typeparam name="T">Supports c# primitives or a Flight object</typeparam>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        private T ReadObjectFromStream<T>(NetworkStream stream)
-        {
-            byte[] messageSizeBytes = new byte[4];
-            stream.Read(messageSizeBytes, 0, 4);
-
-            int messageSize = BitConverter.ToInt32(messageSizeBytes, 0);
-
-            byte[] messageBytes = new byte[messageSize];
-            stream.Read(messageBytes, 0, messageSize);
-
-            return DeserializeObject<T>(messageBytes);
-        }
-
-        private T DeserializeObject<T>(byte[] objectInBytes)
-        {
-            if (typeof(T).Equals(typeof(Flight)))
-            {
-                return (T)((object)ProtoBufWrapper.FlightFromByteArray(objectInBytes));
-            }
-            else
-            {
-                var ms = new MemoryStream(objectInBytes);
-                try
-                {
-                    var formatter = new BinaryFormatter();
-                    return (T)formatter.Deserialize(ms);
-                }
-                finally
-                {
-                    ms.Close();
-                }
-            }
-        }
-
         public void Stop()
         {
             log.Info("Stopping with listening");

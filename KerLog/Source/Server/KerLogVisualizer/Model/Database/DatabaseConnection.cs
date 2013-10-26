@@ -27,7 +27,7 @@ namespace KerLogVisualizer.Model.Database
         {
             List<Flight> output = new List<Flight>();
 
-            string query = "Select FlightData from FlightData";
+            string query = "SELECT  [FlightData] FROM [KerLogTest].[dbo].[FlightData]";
 
             SqlCommand command = new SqlCommand(query, _connection);
 

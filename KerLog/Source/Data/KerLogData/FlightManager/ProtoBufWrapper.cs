@@ -77,6 +77,13 @@ namespace KerLogData.FlightManager
 
         public static Flight FlightFromByteArray(byte [] flightBytes)
         {
+            using (MemoryStream stream = new MemoryStream(flightBytes, false))
+            {
+                stream.Position = 0;
+                return Serializer.Deserialize<Flight>(stream);
+            }
+
+
             using(MemoryStream memStream = new MemoryStream())
             {
                 memStream.Write(flightBytes, 0, flightBytes.Length);
