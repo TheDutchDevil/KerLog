@@ -22,12 +22,21 @@ namespace KerLogVisualizer {
         protected global::System.Web.UI.HtmlControls.HtmlForm home;
         
         /// <summary>
-        /// mvContent control.
+        /// Header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView mvContent;
+        protected global::KerLogVisualizer.Views.ActiveFlightAscendProfile Header;
+        
+        /// <summary>
+        /// imgAscendGraph control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgAscendGraph;
     }
 }

@@ -1,29 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KerLogVisualizer.Home" %>
-
+<%@ Register Src="~/Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Kerlog</title>
-    <link href="CSS/Header.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <form id="home" runat="server">
-        <div id="Header" class="headerBackground" >
-            <div id="HeaderBackgroundImage" class="headerImageBackground">
-                <div id="HeadText" class="headerTitleTextBackground">
-                    <span class="headerTitleText">Kerlog Visualizer</span>
-                </div>
-            </div>
-        </div>
-        <div id="Menu">
-
-        </div>
+    <form id="home" runat="server" oninit="home_Init">
+        <uc1:Header runat="server" ID="Header" />
         <div id ="Content">
-
-            <asp:MultiView ID="mvContent" runat="server">
-            </asp:MultiView>
-
+            <img runat="server" id="imgAscendGraph" />
         </div>
     </form>
 </body>
