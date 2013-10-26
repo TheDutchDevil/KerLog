@@ -52,10 +52,20 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\ConnectionDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConnectionDetail.resx</DependentUpon>
+    </Compile>
     <Compile Include="Serialization\SerializeToFile.cs" />
     <Compile Include="Serialization\StreamUtilTest.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Serialization\ConnectionDetail.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConnectionDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Source\Data\KerLogData\KerLogData.csproj">
       <Project>{cab12856-5efa-4413-8b6d-a7e6feed4690}</Project>

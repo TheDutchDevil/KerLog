@@ -32,7 +32,8 @@ namespace ProtoBufTests.Serialization
         {
             get
             {
-                return new SqlConnection("Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert;");
+                string connString = string.Format("Server={0};Database={1};User Id={2};Password={3};", ConnectionDetail.IP, ConnectionDetail.Database, ConnectionDetail.Username, ConnectionDetail.Password);
+                return new SqlConnection(connString);
             }
         }
 
