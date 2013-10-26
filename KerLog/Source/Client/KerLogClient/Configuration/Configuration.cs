@@ -41,7 +41,7 @@ namespace KerLogClient.Configuration
             if(_port == -1)
             {
                 log.Debug("Port was not found in the configuration");
-                _port = 10000;
+                Port = 10000;
             }
 
             if (_iP == null)
