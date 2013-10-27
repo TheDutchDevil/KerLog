@@ -76,7 +76,7 @@ namespace KerLogClient.FlightListener.FlightSpyImpl
             this._planetname = FlightGlobals.ActiveVessel.mainBody.name;
             this._threshold = PlanetThresholdManager.ThresholdForPlanet(this._planetname);
 
-            flight.StartAscend(this._planetname, FlightLogger.met);
+            flight.StartAscend(this._planetname, FlightLogger.met, Util.VesselHeightFromTerrain(FlightGlobals.ActiveVessel));
         }
 
         public void Update()

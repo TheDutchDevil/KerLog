@@ -31,12 +31,21 @@ namespace KerLogVisualizer {
         protected global::KerLogVisualizer.Views.ActiveFlightAscendProfile Header;
         
         /// <summary>
+        /// Content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Content;
+        
+        /// <summary>
         /// imgAscendGraph control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgAscendGraph;
+        protected global::System.Web.UI.WebControls.Image imgAscendGraph;
     }
 }

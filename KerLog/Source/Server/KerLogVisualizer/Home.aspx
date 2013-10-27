@@ -8,8 +8,8 @@
 <body>
     <form id="home" runat="server" oninit="home_Init">
         <uc1:Header runat="server" ID="Header" />
-        <div id ="Content">
-            <img runat="server" id="imgAscendGraph" />
+        <div id ="Content" runat="server">
+            <asp:Image runat="server" id="imgAscendGraph" ImageUrl=""/>
         </div>
     </form>
 </body>

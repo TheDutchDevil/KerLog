@@ -1,4 +1,5 @@
 ﻿using KerLogVisualizer.Model.NumberCruncher;
+using KerLogVisualizer.Model.NumberCruncher.DataStorage;
 using KerLogVisualizer.Views;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,10 @@ namespace KerLogVisualizer
 {
     public partial class Home : System.Web.UI.Page
     {
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            AscendDataProvider.AscendDataForPlanet("Kerbin", false);
+            AscendData data = AscendDataProvider.AscendDataForPlanet("Kerbin", false);
+            this.imgAscendGraph.ImageUrl = data.ChartAPIUrl;
         }
 
         protected void home_Init(object sender, EventArgs e)

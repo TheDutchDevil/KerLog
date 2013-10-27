@@ -63,14 +63,14 @@ namespace KerLogData.FlightData
             }
         }
 
-        public void StartAscend(string planet, double metAtStart)
+        public void StartAscend(string planet, double metAtStart, long startingHeight)
         {
             if(IsAnyAscendActive)
             {
                 throw new InvalidOperationException("No Ascend can be added if an ascend is already active!");
             }
 
-            _ascendProfiles.Add(new AscendProfile(planet, metAtStart));
+            _ascendProfiles.Add(new AscendProfile(planet, metAtStart, startingHeight));
         }
 
         public void AddVelocityPoint(double met, double velocity)

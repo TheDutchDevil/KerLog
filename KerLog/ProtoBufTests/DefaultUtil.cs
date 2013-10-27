@@ -17,7 +17,7 @@ namespace ProtoBufTests
             {
                 Flight flight = new Flight("Vessel 1", "Drone");
 
-                flight.StartAscend("Planet", 1);
+                flight.StartAscend("Planet", 1, 0);
 
                 for (int i = 0; i < 30; i++)
                 {

@@ -27,10 +27,11 @@ namespace KerLogData.FlightData
         {
         }
 
-        public AscendProfile(string planet, double metAtStart)
+        public AscendProfile(string planet, double metAtStart, long heightFromPlanet)
         {
             _ascendStart = metAtStart;
             _ascendPoints = new List<AscendPoint>();
+            this.AscendPoints.Add(new AscendPoint(heightFromPlanet, 0d));
             _ascendActive = true;
             _planet = planet;
         }
@@ -60,17 +61,36 @@ namespace KerLogData.FlightData
         /// -1 if no height is known for the specified time since ascend start</returns>
         public long HeightAtAscendTime(double timeSinceAscendStart)
         {
-            if(timeSinceAscendStart > this.FlightLength)
+            if (timeSinceAscendStart > this.FlightLength)
             {
                 return -1;
             }
+            else if (timeSinceAscendStart < 0)
+            {
+                throw new ArgumentException("Time since ascend start can not be smaller than zero");
+            }
 
-            AscendPoint pointLower = this.AscendPoints.Single(ascp => ascp.DeltaTSinceAscendStart == this._ascendPoints.Where(ap => ap.DeltaTSinceAscendStart < timeSinceAscendStart).Max(ap => ap.DeltaTSinceAscendStart));
-            AscendPoint pointHigher = this.AscendPoints.Single(ascp => ascp.DeltaTSinceAscendStart == this._ascendPoints.Where(ap => ap.DeltaTSinceAscendStart > timeSinceAscendStart).Min(ap => ap.DeltaTSinceAscendStart));
+            AscendPoint pointLower = null;
+
+            if (timeSinceAscendStart == 0)
+            {
+                pointLower = this.AscendPoints.First(ascp => ascp.DeltaTSinceAscendStart == this.AscendPoints.Min(ap => ap.DeltaTSinceAscendStart));
+            }
+            else
+            {
+                pointLower = this.AscendPoints.First(ascp => ascp.DeltaTSinceAscendStart == this._ascendPoints.Where(ap => ap.DeltaTSinceAscendStart <= timeSinceAscendStart).Max(ap => ap.DeltaTSinceAscendStart));
+            }
+
+            AscendPoint pointHigher = this.AscendPoints.First(ascp => ascp.DeltaTSinceAscendStart == this._ascendPoints.Where(ap => ap.DeltaTSinceAscendStart >= timeSinceAscendStart).Min(ap => ap.DeltaTSinceAscendStart));
 
             double differenceFromLower = timeSinceAscendStart - pointLower.DeltaTSinceAscendStart;
 
             double totalDifference = pointHigher.DeltaTSinceAscendStart - pointLower.DeltaTSinceAscendStart;
+
+            if(totalDifference == 0)
+            {
+                return pointLower.HeightInMeters;
+            }
 
             int percentage = Convert.ToInt32((differenceFromLower * 100) / totalDifference);
 
@@ -88,9 +108,7 @@ namespace KerLogData.FlightData
                 throw new InvalidOperationException("Ascend inactive");
             }
 
-            AscendPoint point = new AscendPoint(heightInMeters);
-            double deltaTime = met - _ascendStart;
-            point.DeltaTSinceAscendStart = deltaTime;
+            AscendPoint point = new AscendPoint(heightInMeters, met - _ascendStart);
             this._ascendPoints.Add(point);
         }
 

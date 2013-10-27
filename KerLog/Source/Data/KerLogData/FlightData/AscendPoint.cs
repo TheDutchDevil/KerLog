@@ -14,8 +14,9 @@ namespace KerLogData.FlightData
         [ProtoMember(2)]
         private double _deltaTSinceAscendStart;
 
-        public AscendPoint(long heightInMeters)
+        public AscendPoint(long heightInMeters, double deltaTSinceAscendStart)
         {
+            this._deltaTSinceAscendStart = deltaTSinceAscendStart;
             this._heightInMeters = heightInMeters;
         }
 

@@ -13,7 +13,7 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private readonly List<long> _heightPoints;
+        private readonly List<double> _heightPoints;
 
         private readonly string _planetName;
 
@@ -26,11 +26,11 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
         public AscendData(IEnumerable<long> dataPoints, string planetName, bool failedAscends)
         {
             long highestPoint = dataPoints.Max();
-            this._heightPoints = new List<long>();
+            this._heightPoints = new List<double>();
 
             foreach(long dataPoint in dataPoints)
             {
-                this._heightPoints.Add((dataPoint / highestPoint) * 100l);
+                this._heightPoints.Add(((Convert.ToDouble(dataPoint) / Convert.ToDouble(highestPoint)) * 100d));
             }
 
             this._planetName = planetName;
@@ -40,16 +40,18 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
             sb = sb.Append("http://chart.apis.google.com/chart?").Append("cht=lc&chs=500x500")
                 .Append("&chd=t:");
 
-            foreach(long dataPoint in _heightPoints)
+            foreach(double dataPoint in _heightPoints)
             {
-                sb = sb.Append(dataPoint).Append(',');
+                sb = sb.Append(dataPoint.ToString("0.00")).Append(',');
             }
 
             sb.Replace(',', '&', sb.Length - 1, 1);
 
             this._chartName = string.Format("{0} ascends on planet {1}", this._areFailedAscends ? "Failed" : "successful", this._planetName);
 
-            sb = sb.Append("chtt=").Append(HttpUtility.UrlEncode(this._chartName));
+            sb = sb.Append("chtt=").Append(HttpUtility.UrlEncode(this._chartName)).Append("&hAxis.title=Height from surface");
+
+            this._chartUrl = sb.ToString();
 
             log.DebugFormat("Created new AscendData, url is '{0}'", this._chartUrl);
         }
