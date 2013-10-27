@@ -38,7 +38,7 @@ namespace ProtoBufTests.Serialization
             Flight deserFlight = StreamUtil.ReadObjectFromStream<Flight>(stream);
 
             Assert.AreEqual(flight.VesselName, deserFlight.VesselName);
-            Assert.AreEqual(30, deserFlight.AscendProfiles[0].AscendPoints.Count);            
+            Assert.AreEqual(31, deserFlight.AscendProfiles[0].AscendPoints.Count);            
         }
     }
 }

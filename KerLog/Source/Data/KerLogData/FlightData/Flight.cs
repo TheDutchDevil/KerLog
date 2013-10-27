@@ -50,6 +50,11 @@ namespace KerLogData.FlightData
             {
                 _velocityForFlight = new Dictionary<double, double>();
             }
+
+            if(this._ascendProfiles == null)
+            {
+                this._ascendProfiles = new List<AscendProfile>();
+            }
         }
 
 

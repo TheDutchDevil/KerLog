@@ -146,3 +146,117 @@
 2013-10-27 12:05:47,770 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
 2013-10-27 12:05:47,853 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 1 
 2013-10-27 12:06:41,922 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.03,0.05,0.08,0.15,0.24,0.34,0.47,0.62,0.77,0.94,1.13,1.31,1.51,1.70,1.91,2.12,2.33,2.55,2.77,3.00,3.23,3.47,3.71,3.96,4.21,4.45,4.71,4.96,5.22,5.48,5.75,6.03,6.30,6.59,6.88,7.18,7.49,7.80,8.12,8.44,8.76,9.09,9.42,9.75,10.10,10.44,10.80,11.16,11.53,11.91,12.30,12.70,13.11,13.53,13.96,14.41,14.86,15.33,15.81,16.30,16.80,17.32,17.85,18.40,18.97,19.56,20.16,20.78,21.43,22.10,22.78,23.49,24.23,25.01,25.81,26.62,27.46,28.33,29.23,30.16,31.11,32.09,33.11,34.15,35.21,36.30,37.43,38.60,39.79,41.02,42.29,43.60,44.94,46.33,47.76,49.23,50.75,52.32,53.93,55.59,57.31,59.07,60.91,62.78,64.72,66.72,68.77,70.89,73.06,75.27,77.51,79.82,82.17,84.57,87.01,89.53,92.10,94.70,97.35,100.00&chtt=successful+ascends+on+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 13:10:49,606 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 13:10:49,736 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,916 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:10:49,917 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 9 
+2013-10-27 13:43:56,927 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 13:43:57,032 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:43:57,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 13:45:37,989 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 13:45:38,084 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,227 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,227 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,227 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,227 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,227 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,227 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,228 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,228 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,228 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 13:45:38,228 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 13:46:37,145 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.02,0.04,0.08,0.15,0.24,0.35,0.49,0.63,0.79,0.97,1.15,1.34,1.54,1.74,1.95,2.17,2.39,2.62,2.85,3.08,3.33,3.58,3.84,4.10,4.37,4.64,4.92,5.21,5.50,5.80,6.11,6.42,6.75,7.09,7.43,7.79,8.16,8.54,8.93,9.34,9.76,10.18,10.63,11.09,11.56,12.06,12.57,13.10,13.61,14.12,14.63,15.15,15.66,16.19,16.72,17.26,17.80,18.36,18.93,19.51,20.10,20.70,21.32,21.95,22.60,23.26,23.94,24.63,25.35,26.08,26.83,27.60,28.39,29.20,30.05,30.90,31.78,32.68,33.59,34.55,35.53,36.54,37.55,38.59,39.66,40.76,41.88,43.02,44.20,45.41,46.65,47.92,49.22,50.56,51.94,53.34,54.79,56.28,57.80,59.37,60.98,62.63,64.32,66.05,67.84,69.67,71.55,73.48,75.45,77.47,79.52,81.62,83.76,85.96,88.19,90.47,92.81,95.18,97.58,100.00&chtt=successful+ascends+on+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 14:11:24,264 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 14:11:24,339 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,479 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:24,480 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 14:11:24,890 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.02,0.04,0.08,0.15,0.24,0.35,0.49,0.63,0.79,0.97,1.15,1.34,1.54,1.74,1.95,2.17,2.39,2.62,2.85,3.08,3.33,3.58,3.84,4.10,4.37,4.64,4.92,5.21,5.50,5.80,6.11,6.42,6.75,7.09,7.43,7.79,8.16,8.54,8.93,9.34,9.76,10.18,10.63,11.09,11.56,12.06,12.57,13.10,13.61,14.12,14.63,15.15,15.66,16.19,16.72,17.26,17.80,18.36,18.93,19.51,20.10,20.70,21.32,21.95,22.60,23.26,23.94,24.63,25.35,26.08,26.83,27.60,28.39,29.20,30.05,30.90,31.78,32.68,33.59,34.55,35.53,36.54,37.55,38.59,39.66,40.76,41.88,43.02,44.20,45.41,46.65,47.92,49.22,50.56,51.94,53.34,54.79,56.28,57.80,59.37,60.98,62.63,64.32,66.05,67.84,69.67,71.55,73.48,75.45,77.47,79.52,81.62,83.76,85.96,88.19,90.47,92.81,95.18,97.58,100.00&chtt=Successful+ascends+from+the+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 14:11:26,323 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 14:11:26,352 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:11:26,353 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 14:11:26,765 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.02,0.04,0.08,0.15,0.24,0.35,0.49,0.63,0.79,0.97,1.15,1.34,1.54,1.74,1.95,2.17,2.39,2.62,2.85,3.08,3.33,3.58,3.84,4.10,4.37,4.64,4.92,5.21,5.50,5.80,6.11,6.42,6.75,7.09,7.43,7.79,8.16,8.54,8.93,9.34,9.76,10.18,10.63,11.09,11.56,12.06,12.57,13.10,13.61,14.12,14.63,15.15,15.66,16.19,16.72,17.26,17.80,18.36,18.93,19.51,20.10,20.70,21.32,21.95,22.60,23.26,23.94,24.63,25.35,26.08,26.83,27.60,28.39,29.20,30.05,30.90,31.78,32.68,33.59,34.55,35.53,36.54,37.55,38.59,39.66,40.76,41.88,43.02,44.20,45.41,46.65,47.92,49.22,50.56,51.94,53.34,54.79,56.28,57.80,59.37,60.98,62.63,64.32,66.05,67.84,69.67,71.55,73.48,75.45,77.47,79.52,81.62,83.76,85.96,88.19,90.47,92.81,95.18,97.58,100.00&chtt=Successful+ascends+from+the+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 14:11:59,946 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 14:12:00,037 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,180 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:00,181 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 14:12:00,590 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.02,0.04,0.08,0.15,0.24,0.35,0.49,0.63,0.79,0.97,1.15,1.34,1.54,1.74,1.95,2.17,2.39,2.62,2.85,3.08,3.33,3.58,3.84,4.10,4.37,4.64,4.92,5.21,5.50,5.80,6.11,6.42,6.75,7.09,7.43,7.79,8.16,8.54,8.93,9.34,9.76,10.18,10.63,11.09,11.56,12.06,12.57,13.10,13.61,14.12,14.63,15.15,15.66,16.19,16.72,17.26,17.80,18.36,18.93,19.51,20.10,20.70,21.32,21.95,22.60,23.26,23.94,24.63,25.35,26.08,26.83,27.60,28.39,29.20,30.05,30.90,31.78,32.68,33.59,34.55,35.53,36.54,37.55,38.59,39.66,40.76,41.88,43.02,44.20,45.41,46.65,47.92,49.22,50.56,51.94,53.34,54.79,56.28,57.80,59.37,60.98,62.63,64.32,66.05,67.84,69.67,71.55,73.48,75.45,77.47,79.52,81.62,83.76,85.96,88.19,90.47,92.81,95.18,97.58,100.00&chtt=Successful+ascends+from+the+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 14:12:01,079 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 14:12:01,095 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:12:01,096 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 14:12:01,560 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.02,0.04,0.08,0.15,0.24,0.35,0.49,0.63,0.79,0.97,1.15,1.34,1.54,1.74,1.95,2.17,2.39,2.62,2.85,3.08,3.33,3.58,3.84,4.10,4.37,4.64,4.92,5.21,5.50,5.80,6.11,6.42,6.75,7.09,7.43,7.79,8.16,8.54,8.93,9.34,9.76,10.18,10.63,11.09,11.56,12.06,12.57,13.10,13.61,14.12,14.63,15.15,15.66,16.19,16.72,17.26,17.80,18.36,18.93,19.51,20.10,20.70,21.32,21.95,22.60,23.26,23.94,24.63,25.35,26.08,26.83,27.60,28.39,29.20,30.05,30.90,31.78,32.68,33.59,34.55,35.53,36.54,37.55,38.59,39.66,40.76,41.88,43.02,44.20,45.41,46.65,47.92,49.22,50.56,51.94,53.34,54.79,56.28,57.80,59.37,60.98,62.63,64.32,66.05,67.84,69.67,71.55,73.48,75.45,77.47,79.52,81.62,83.76,85.96,88.19,90.47,92.81,95.18,97.58,100.00&chtt=Successful+ascends+from+the+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 14:13:15,990 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 14:13:16,080 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,228 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:13:16,229 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 14:13:16,647 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.02,0.04,0.08,0.15,0.24,0.35,0.49,0.63,0.79,0.97,1.15,1.34,1.54,1.74,1.95,2.17,2.39,2.62,2.85,3.08,3.33,3.58,3.84,4.10,4.37,4.64,4.92,5.21,5.50,5.80,6.11,6.42,6.75,7.09,7.43,7.79,8.16,8.54,8.93,9.34,9.76,10.18,10.63,11.09,11.56,12.06,12.57,13.10,13.61,14.12,14.63,15.15,15.66,16.19,16.72,17.26,17.80,18.36,18.93,19.51,20.10,20.70,21.32,21.95,22.60,23.26,23.94,24.63,25.35,26.08,26.83,27.60,28.39,29.20,30.05,30.90,31.78,32.68,33.59,34.55,35.53,36.54,37.55,38.59,39.66,40.76,41.88,43.02,44.20,45.41,46.65,47.92,49.22,50.56,51.94,53.34,54.79,56.28,57.80,59.37,60.98,62.63,64.32,66.05,67.84,69.67,71.55,73.48,75.45,77.47,79.52,81.62,83.76,85.96,88.19,90.47,92.81,95.18,97.58,100.00&chtt=Successful+ascends+from+the+planet+Kerbin&hAxis.title=Height from surface' 
+2013-10-27 14:33:50,129 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Created a new DBS connection with the following connection string Server=192.168.1.7;Database=KerLogTest;User Id=KerLogTest;Password=insert; 
+2013-10-27 14:33:50,207 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Read a flight from the database, converting it to a Flight 
+2013-10-27 14:33:50,322 DEBUG KerLogVisualizer.Model.Database.DatabaseConnection - Total amount of flightsread is 10 
+2013-10-27 14:33:50,515 DEBUG KerLogVisualizer.Model.NumberCruncher.DataStorage.AscendData - Created new AscendData, url is 'http://chart.apis.google.com/chart?cht=lc&chs=500x500&chd=t:0.06,0.11,0.23,0.43,0.70,1.03,1.41,1.84,2.30,2.80,3.33,3.88,4.45,5.04,5.65,6.27,6.91,7.57,8.25,8.93,9.64,10.36,11.11,11.87,12.65,13.44,14.24,15.07,15.92,16.78,17.67,18.59,19.54,20.51,21.51,22.55,23.62,24.72,25.86,27.03,28.24,29.48,30.76,32.09,33.47,34.90,36.39,37.91,39.40,40.87,42.36,43.84,45.33,46.85,48.39,49.95,51.53,53.14,54.79,56.46,58.17,59.91,61.70,63.53,65.41,67.32,69.28,71.30,73.37,75.49,77.66,79.90,82.18,84.52,86.97,89.44,91.98,94.58,97.23,100.00&chtt=Successful+ascends+from+the+planet+Kerbin&hAxis.title=Height from surface' 

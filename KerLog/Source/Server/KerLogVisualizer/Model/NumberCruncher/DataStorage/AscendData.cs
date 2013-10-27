@@ -47,7 +47,7 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
 
             sb.Replace(',', '&', sb.Length - 1, 1);
 
-            this._chartName = string.Format("{0} ascends on planet {1}", this._areFailedAscends ? "Failed" : "successful", this._planetName);
+            this._chartName = string.Format("{0} ascends from the planet {1}", this._areFailedAscends ? "Failed" : "Successful", this._planetName);
 
             sb = sb.Append("chtt=").Append(HttpUtility.UrlEncode(this._chartName)).Append("&hAxis.title=Height from surface");
 

@@ -34,7 +34,7 @@ namespace ProtoBufTests.Serialization
             Flight deserFlight = ProtoBufWrapper.FlightFromByteArray(flightBytes);
 
             Assert.AreEqual(flight.VesselName, deserFlight.VesselName);
-            Assert.AreEqual(30, deserFlight.AscendProfiles[0].AscendPoints.Count);
+            Assert.AreEqual(31, deserFlight.AscendProfiles[0].AscendPoints.Count);
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace ProtoBufTests.Serialization
             connection.Close();
 
             Assert.AreEqual(flight.VesselName, deserFlight.VesselName);
-            Assert.AreEqual(30, deserFlight.AscendProfiles[0].AscendPoints.Count);
+            Assert.AreEqual(31, deserFlight.AscendProfiles[0].AscendPoints.Count);
 
         }
 
