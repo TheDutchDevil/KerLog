@@ -10,37 +10,11 @@ namespace ProtoBufTests.Serialization
     [TestClass]
     public class SerializeToFile
     {
-        public static Flight DefaultFlight
-        {
-            get
-            {
-                Flight flight = new Flight("Vessel 1", "Drone");
-
-                flight.StartAscend("Planet", 1);
-
-                for (int i = 0; i < 30; i++)
-                {
-                    flight.AddAscendPoint(i * 100, i + 1);
-                }
-
-                flight.StopAscend(true);
-                return flight;
-            }
-        }
-
-        public SqlConnection DefaultConnection
-        {
-            get
-            {
-                string connString = string.Format("Server={0};Database={1};User Id={2};Password={3};", ConnectionDetail.IP, ConnectionDetail.Database, ConnectionDetail.Username, ConnectionDetail.Password);
-                return new SqlConnection(connString);
-            }
-        }
 
         [TestMethod]
         public void SerializeToFileTest()
         {
-            Flight flight = DefaultFlight;
+            Flight flight = DefaultUtil.DefaultFlight;
 
             ProtoBufWrapper.SerializeToFile(flight, "test.bin");
 
@@ -53,7 +27,7 @@ namespace ProtoBufTests.Serialization
         [TestMethod]
         public void SerializeToByteArray()
         {
-            Flight flight = DefaultFlight;
+            Flight flight = DefaultUtil.DefaultFlight;
 
             byte[] flightBytes = ProtoBufWrapper.ToByteArray(flight);
 
@@ -66,9 +40,9 @@ namespace ProtoBufTests.Serialization
         [TestMethod]
         public void SerializeToDatabase()
         {
-            Flight flight = DefaultFlight;
+            Flight flight = DefaultUtil.DefaultFlight;
 
-            SqlConnection connection = DefaultConnection;
+            SqlConnection connection = DefaultUtil.DefaultConnection;
 
             connection.Open();
 

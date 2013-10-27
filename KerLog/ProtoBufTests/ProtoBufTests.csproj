@@ -51,8 +51,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DefaultUtil.cs" />
+    <Compile Include="FlightData\AscendProfileTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serialization\ConnectionDetail.Designer.cs">
+    <Compile Include="ConnectionDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ConnectionDetail.resx</DependentUpon>
@@ -61,7 +63,7 @@
     <Compile Include="Serialization\StreamUtilTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Serialization\ConnectionDetail.resx">
+    <EmbeddedResource Include="ConnectionDetail.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ConnectionDetail.Designer.cs</LastGenOutput>
     </EmbeddedResource>

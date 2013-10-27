@@ -41,6 +41,46 @@ namespace KerLogData.FlightData
         public string Planet { get { return _planet; } }
         public bool AscendSucceeded { get { return _ascendSucceeded; } }
 
+        public int FlightLength
+        {
+            get
+            {
+                return (int) this._ascendPoints.Max(ap => ap.DeltaTSinceAscendStart);
+            }
+        }
+
+        /// <summary>
+        /// Returns the height of the vessel at the specified time since
+        /// ascend start. If no value for the time is known because the
+        /// time is bigger than the total time of the ascend -1 is returned
+        /// </summary>
+        /// <param name="timeSinceAscendStart">The time since the start of
+        /// the ascend for which the vessel height should be returned</param>
+        /// <returns>The vessel height at the provided time since ascend start.
+        /// -1 if no height is known for the specified time since ascend start</returns>
+        public long HeightAtAscendTime(double timeSinceAscendStart)
+        {
+            if(timeSinceAscendStart > this.FlightLength)
+            {
+                return -1;
+            }
+
+            AscendPoint pointLower = this.AscendPoints.Single(ascp => ascp.DeltaTSinceAscendStart == this._ascendPoints.Where(ap => ap.DeltaTSinceAscendStart < timeSinceAscendStart).Max(ap => ap.DeltaTSinceAscendStart));
+            AscendPoint pointHigher = this.AscendPoints.Single(ascp => ascp.DeltaTSinceAscendStart == this._ascendPoints.Where(ap => ap.DeltaTSinceAscendStart > timeSinceAscendStart).Min(ap => ap.DeltaTSinceAscendStart));
+
+            double differenceFromLower = timeSinceAscendStart - pointLower.DeltaTSinceAscendStart;
+
+            double totalDifference = pointHigher.DeltaTSinceAscendStart - pointLower.DeltaTSinceAscendStart;
+
+            int percentage = Convert.ToInt32((differenceFromLower * 100) / totalDifference);
+
+            long totalHeightDifference = pointHigher.HeightInMeters - pointLower.HeightInMeters;
+
+            long heightAtMet = (percentage * totalHeightDifference) / 100;
+
+            return pointLower.HeightInMeters + heightAtMet;
+        }
+
         public void AddAscendPoint(long heightInMeters, double met)
         {
             if (!_ascendActive)

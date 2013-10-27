@@ -30,7 +30,7 @@ namespace ProtoBufTests.Serialization
         {
             MemoryStream stream = new MemoryStream();
 
-            Flight flight = SerializeToFile.DefaultFlight;
+            Flight flight = DefaultUtil.DefaultFlight;
 
             StreamUtil.WriteToStream(flight, stream);
             stream.Position = 0;
