@@ -1,6 +1,5 @@
 ﻿using KerLogData.FlightData;
 using KerLogData.FlightManager;
-using NetworkCommsDotNet;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -140,41 +139,17 @@ namespace ClientListener.KerLogListener
                 handler.Disconnect(true);
             }
         }
+
+        /// <summary>
+        /// Stops the server, so no more clients can 
+        /// connect. After calling stop there might still
+        /// be clients connected though
+        /// </summary>
         public void Stop()
         {
             log.Info("Stopping with listening");
             _runServer = false;
             _listener.Disconnect(false);
-        }
-
-
-        // TODO: Logging / make flexible
-        [Obsolete("Depends on unused network comms library")]
-        private  void ReceiveOpenMessage(PacketHeader header, Connection connection, string hash)
-        {
-            log.Info(string.Format("Received a new client, from {0}", connection.ConnectionInfo.RemoteEndPoint));
-            DatabaseManager dbsManager = new DatabaseManager("127.0.0.1", "KerLogTest", "KerLogTest", "insert", hash);
-
-            if(dbsManager.ConnectionIsValid)
-            {
-                log.Debug("Connection is valid, sending waiting to see if flights are available");
-                bool hasFlightsToSend = connection.SendReceiveObject<bool>("connectionResult", "hasFlightsToSend", 3000, true);
-                while(hasFlightsToSend)
-                {
-                    log.Debug("Flight available, waiting for the flight");
-                    Flight flight = connection.SendReceiveObject<Flight>("requestFlight", "Flight", 3000);
-                    log.Debug(string.Format("Flight available, vessel name is {0}", flight.VesselName));
-                    hasFlightsToSend = connection.SendReceiveObject<bool>("persistResult", "hasFlightsToSend", 3000, dbsManager.PersistFlight(flight));
-                }
-                log.Debug("No more flights available, closing connection");
-                connection.CloseConnection(false);
-            }
-            else
-            {
-                log.Info("database connection could not be made, closing connection");
-                connection.SendObject("connectionResult", false);
-                connection.CloseConnection(false);
-            }
         }
     }
 }

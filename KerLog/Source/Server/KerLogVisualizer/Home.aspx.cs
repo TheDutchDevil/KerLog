@@ -38,8 +38,6 @@ namespace KerLogVisualizer
                 ascendData.Rows.Add(percentage, data.AscendPoints[i]);
             }
 
-            this.GVLineChart1.GviTitle = data.Title;
-            this.GVLineChart1.GviTitlePosition = "in";
             this.GVLineChart1.GviVAxisClass = new GoogleChartsNGraphsControls.vAxis();
             this.GVLineChart1.GviVAxisClass.Title = "Height in meters";
             this.GVLineChart1.GviVAxisClass.SlantedText = true;
