@@ -13,7 +13,7 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private readonly List<double> _heightPoints;
+        private readonly List<long> _heightPoints;
 
         private readonly string _planetName;
 
@@ -26,12 +26,7 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
         public AscendData(IEnumerable<long> dataPoints, string planetName, bool failedAscends)
         {
             long highestPoint = dataPoints.Max();
-            this._heightPoints = new List<double>();
-
-            foreach(long dataPoint in dataPoints)
-            {
-                this._heightPoints.Add(((Convert.ToDouble(dataPoint) / Convert.ToDouble(highestPoint)) * 100d));
-            }
+            this._heightPoints = dataPoints.ToList();
 
             this._planetName = planetName;
             this._areFailedAscends = failedAscends;
@@ -54,6 +49,22 @@ namespace KerLogVisualizer.Model.NumberCruncher.DataStorage
             this._chartUrl = sb.ToString();
 
             log.DebugFormat("Created new AscendData, url is '{0}'", this._chartUrl);
+        }
+
+        public string Title
+        {
+            get
+            {
+                return this._chartName;
+            }
+        }
+
+        public List<long> AscendPoints
+        {
+            get
+            {
+                return this._heightPoints.ToList();
+            }
         }
 
         public string ChartAPIUrl

@@ -10,7 +10,7 @@ namespace KerLogVisualizer.Model.NumberCruncher
 {
     public class AscendDataProvider
     {      
-        private const int ASCEND_DATA_POINTS = 80;
+        private const int ASCEND_DATA_POINTS = 60;
 
         public static AscendData AscendDataForPlanet(string planetName, bool failedAscends)
         {
@@ -38,7 +38,7 @@ namespace KerLogVisualizer.Model.NumberCruncher
 
             for (int i = 0; i < metPoints.Length; i++)
             {
-                double percentage = ((double)i * 100d) / 120;
+                double percentage = ((double)i * 100d) / ASCEND_DATA_POINTS;
 
                 double met = metPoints[i];
                 List<long> heightAtMet = new List<long>();
