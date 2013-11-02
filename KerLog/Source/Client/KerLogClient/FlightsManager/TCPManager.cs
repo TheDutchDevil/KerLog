@@ -1,5 +1,6 @@
 ﻿using KerLogClient.Configuration;
 using KerLogClient.General;
+using KerLogClient.Properties;
 using KerLogData.FlightData;
 using KerLogData.FlightManager;
 using System;
@@ -21,7 +22,8 @@ namespace KerLogClient.FlightsManager
 
         private static string _ip;
         private static int _port;
-        private static Thread t;
+        private static Thread _t;
+        private static int _socketVersion;
 
         public static void SendFlightsList(List<Flight> flights)
         {
@@ -29,14 +31,24 @@ namespace KerLogClient.FlightsManager
             _ip = ConfigurationProvider.Configuration.IP;
             _port = ConfigurationProvider.Configuration.Port;
 
+            try
+            {
+                _socketVersion = int.Parse(SocketVersionResources.SocketVersion);
+            }
+            catch(FormatException ex)
+            {
+                log.Fatal(string.Format("Could not parse the socket version number '{0}'", SocketVersionResources.SocketVersion), ex);
+                return;
+            }
+
             if (flights == null || flights.Count == 0)
             {
                 return;
             }
         
             log.Info("Creating a new thread to persist a new list of flights");
-            t = new Thread(new ParameterizedThreadStart(SendFlightsListAsync));
-            t.Start(flights);
+            _t = new Thread(new ParameterizedThreadStart(SendFlightsListAsync));
+            _t.Start(flights);
         }
 
 
@@ -71,6 +83,8 @@ namespace KerLogClient.FlightsManager
                 using(NetworkStream stream = new NetworkStream(socket))
                 {
                     log.Debug(string.Format("Managed to connect to the server, waiting to see if I can stay connect"));
+
+                    StreamUtil.WriteToStream(_socketVersion, stream);
 
                     if (!StreamUtil.ReadObjectFromStream<bool>(stream))
                     {

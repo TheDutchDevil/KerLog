@@ -61,6 +61,11 @@
     <Compile Include="FlightListener\IFlightSpy.cs" />
     <Compile Include="FlightListener\MenuSpy.cs" />
     <Compile Include="FlightsManager\Manager.cs" />
+    <Compile Include="Properties\SocketVersionResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocketVersionResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="FlightsManager\TCPManager.cs" />
     <Compile Include="General\Logging.cs" />
     <Compile Include="General\PlanetThreshold.cs" />
@@ -89,6 +94,12 @@
       <Project>{cab12856-5efa-4413-8b6d-a7e6feed4690}</Project>
       <Name>KerLogData</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\SocketVersionResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SocketVersionResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

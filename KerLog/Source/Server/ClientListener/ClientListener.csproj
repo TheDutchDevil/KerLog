@@ -51,6 +51,12 @@
     <Compile Include="KerLogListener\DatabaseManager.cs" />
     <Compile Include="KerLogListener\Listener.cs" />
     <Compile Include="KerLogListener\ThreadManager.cs" />
+    <Compile Include="KerLogListener\VersionManagement\VersionChecker.cs" />
+    <Compile Include="Properties\SupportedVersion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupportedVersion.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +75,15 @@
       <Project>{cab12856-5efa-4413-8b6d-a7e6feed4690}</Project>
       <Name>KerLogData</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\SupportedVersion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SupportedVersion.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Deploy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,5 @@
-﻿using KerLogData.FlightData;
+﻿using ClientListener.KerLogListener.VersionManagement;
+using KerLogData.FlightData;
 using KerLogData.FlightManager;
 using System;
 using System.Collections.Generic;
@@ -97,6 +98,13 @@ namespace ClientListener.KerLogListener
             {
                 using (var stream = new NetworkStream(handler))
                 {
+                    if(!VersionChecker.VersionIsValidForClient(stream, 3000))
+                    {
+                        handler.Disconnect(false);
+                        log.Info("Disconnecting from client because of invalid version number");
+                        return;
+                    }
+
                     StreamUtil.WriteToStream(true, stream);
 
                     string hash = StreamUtil.ReadObjectFromStream<string>(stream);
