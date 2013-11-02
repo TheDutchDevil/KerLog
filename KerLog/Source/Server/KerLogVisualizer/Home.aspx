@@ -7,7 +7,7 @@
 <head runat="server">
     <title>Kerlog</title>
 </head>
-<body>
+<body class ="body">
     <form id="home" runat="server" oninit="home_Init">
         <uc1:Header runat="server" ID="Header" />
         <div id ="Content" runat="server">
