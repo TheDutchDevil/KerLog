@@ -9,3 +9,7 @@
                 </div>
             </div>
         </div>
+        <div id="Menu">
+            <asp:Table id="spCommand" runat="server" CssClass="commandTable">
+            </asp:Table>
+        </div>

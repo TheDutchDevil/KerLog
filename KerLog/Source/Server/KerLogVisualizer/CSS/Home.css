@@ -1,0 +1,11 @@
+﻿.body {
+    margin: 0px;
+    padding: 0px;
+}
+.visualization {
+    float: left;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}

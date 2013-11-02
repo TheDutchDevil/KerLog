@@ -6,8 +6,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Kerlog</title>
+    <link href="..\CSS/Home.css" rel="stylesheet" type="text/css" />
 </head>
-<body class ="body">
+<body class="body">
     <form id="home" runat="server" oninit="home_Init">
         <uc1:Header runat="server" ID="Header" />
         <div id ="Content" runat="server">

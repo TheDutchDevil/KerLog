@@ -49,6 +49,7 @@
       <HintPath>..\..\..\External files\packages\log4net.2.0.2\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
@@ -66,7 +67,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\Header.css" />
+    <Content Include="CSS\Header.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\Home.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Home.aspx" />
     <Content Include="Resources\KLR1.jpg" />
     <Content Include="Controls\Header.ascx" />
@@ -81,6 +87,7 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\Database\DatabaseConnection.cs" />
+    <Compile Include="Model\NavigationProvider.cs" />
     <Compile Include="Model\NumberCruncher\AscendDataProvider.cs" />
     <Compile Include="Model\NumberCruncher\DataStorage\AscendData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

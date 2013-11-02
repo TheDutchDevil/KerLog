@@ -1,7 +1,4 @@
 ﻿
-.labelHeader {
-
-}
 .headerBackground{
     background-size:100% 100%;
     overflow:hidden;
@@ -23,16 +20,12 @@
     vertical-align:middle;
     line-height:250px;
 }
-.body {
-    margin: 0px;
-    padding: 0px;
+.commandTable {
+    align-self: center;
+    margin: 0 auto;
 }
-.visualization
-        {
-            float: left;
-            width: 500px;
-            height: 500px;
-            position: relative;
-            overflow: hidden;
-        }
+.commandCell {
+}
+.commandRow {
+}
 
